@@ -3001,7 +3001,7 @@ permalink: /changelog/
   * Improve social trackers categorization see [ac#6851](https://github.com/mozilla-mobile/android-components/issues/6851) and [fenix#5921](https://github.com/mozilla-mobile/fenix/issues/5921)
 
 * **service-firefox-accounts**
-  * ⚠️ **This is a breaking change**: `FxaAccountManager.withConstellation` puts the `DeviceConstellation` within the same scope as the block so you no longer need to use the `it` reference.
+  * ⚠️ **This is a breaking change**: `FxaAccountManager.withConstellationIfPossible` puts the `DeviceConstellation` within the same scope as the block so you no longer need to use the `it` reference.
 
 * **feature-syncedtabs**
   * Moved `SyncedTabsFeature` to `SyncedTabsStorage`.
