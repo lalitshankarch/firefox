@@ -4,6 +4,7 @@
 
 package org.mozilla.fenix.ext
 
+import mozilla.components.support.base.utils.MAX_URI_LENGTH
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -14,6 +15,13 @@ class StringTest {
         val urlTest = "https://www.amazon.com"
         val new = urlTest.simplifiedUrl()
         assertEquals(new, "amazon.com")
+    }
+
+    @Test
+    fun `Shortened Url`() {
+        val urlTest = "*".repeat(MAX_URI_LENGTH + 10)
+        val shortenedUrl = urlTest.toShortUrl()
+        assertEquals(shortenedUrl.length, MAX_URI_LENGTH)
     }
 
     @Test
